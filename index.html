@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luxury Motors Elite Corp. - Compra y alquiler de vehículos y motocicletas premium.">
+  <title>Luxury Motors Elite Corp. | Catálogo Premium</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top luxury-nav">
+      <div class="container-fluid px-lg-5">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <i class="fa-solid fa-car-side me-2"></i>LME
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+
+          <button class="btn btn-outline-gold cart-nav-button" id="openCartButton">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Carrito <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content text-center">
+        <div class="hero-logo">
+          <div class="logo-emblem"><i class="fa-solid fa-crown"></i></div>
+          <span>LUXURY MOTORS</span>
+          <small>ELITE CORP.</small>
+        </div>
+
+        <p class="eyebrow">EXCELENCIA • POTENCIA • DISTINCIÓN</p>
+        <h1>CATÁLOGO <span>PREMIUM</span></h1>
+        <p class="hero-description">
+          Descubre una experiencia extraordinaria en compra y alquiler
+          de automóviles y motocicletas de alta gama.
+        </p>
+        <a href="#catalogo" class="btn btn-gold btn-lg mt-3">
+          Explorar colección <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="catalog-sticky">
+        <div class="container-fluid px-lg-5 py-3">
+          <div class="row align-items-center g-3">
+            <div class="col-lg-4">
+              <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="searchInput" placeholder="Buscar marca o modelo...">
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="category-tabs">
+                <button class="category-tab active" data-category="todos">Todos</button>
+                <button class="category-tab" data-category="vehiculos">Automóviles</button>
+                <button class="category-tab" data-category="motos">Motocicletas</button>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <select id="sortSelect" class="form-select luxury-select">
+                <option value="default">Ordenar catálogo</option>
+                <option value="price-low">Precio: menor a mayor</option>
+                <option value="price-high">Precio: mayor a menor</option>
+                <option value="name">Nombre A-Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid px-lg-5 py-5">
+        <div class="section-heading text-center mb-5">
+          <p class="eyebrow">COLECCIÓN EXCLUSIVA</p>
+          <h2>Encuentra tu próximo <span>icono</span></h2>
+          <p>Un catálogo seleccionado para quienes exigen lo extraordinario.</p>
+        </div>
+
+        <div class="catalog-status mb-4">
+          <span id="resultsCount">Cargando catálogo...</span>
+          <span class="status-indicator"><i class="fa-solid fa-circle"></i> Inventario demo</span>
+        </div>
+
+        <div class="row g-4" id="vehicleGrid"></div>
+        <div class="empty-state d-none" id="emptyState">
+          <i class="fa-solid fa-car-side"></i>
+          <h3>No encontramos resultados</h3>
+          <p>Prueba con otra marca o modelo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="nosotros">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="eyebrow">EL ESTÁNDAR ELITE</p>
+            <h2>Más que vehículos.<br><span>Una experiencia.</span></h2>
+            <p>
+              En Luxury Motors Elite Corp. reunimos diseño, innovación,
+              rendimiento y exclusividad en una experiencia de movilidad
+              pensada para clientes que valoran cada detalle.
+            </p>
+            <div class="feature-list">
+              <p><i class="fa-solid fa-shield-halved"></i> Atención y procesos de demostración seguros.</p>
+              <p><i class="fa-solid fa-gem"></i> Selección de modelos premium.</p>
+              <p><i class="fa-solid fa-file-circle-check"></i> Documentación comercial automatizada.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="experience-image">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85" alt="Automóvil de lujo">
+              <div class="experience-caption">
+                <span>DRIVE THE EXTRAORDINARY</span>
+                <strong>Luxury without limits.</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="container py-5 text-center">
+        <p class="eyebrow">ESTAMOS PARA SERVIRTE</p>
+        <h2>Tu próxima experiencia <span>comienza aquí.</span></h2>
+        <p>Solicita información sobre nuestros vehículos y servicios.</p>
+        <a href="mailto:info@luxurymotors.com" class="btn btn-gold mt-3">
+          <i class="fa-solid fa-envelope me-2"></i>Contactar
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center py-4">
+      <div class="footer-brand"><i class="fa-solid fa-crown"></i> LUXURY MOTORS ELITE CORP.</div>
+      <p>Av. Anacaona #105, Torre Empresarial Elite, Santo Domingo, R.D.</p>
+      <p class="footer-note">Proyecto académico demostrativo. Las operaciones y pagos son simulados.</p>
+      <small>© 2026 Luxury Motors Elite Corp. | Catálogo Premium</small>
+    </div>
+  </footer>
+
+  <button class="floating-cart" id="floatingCart" aria-label="Abrir carrito">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="floatingCartCount">0</span>
+  </button>
+
+  <!-- Modal de alquiler -->
+  <div class="modal fade" id="rentalModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content luxury-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-key me-2"></i>Configurar alquiler</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="rentalVehicleInfo"></div>
+
+          <div class="row g-3 mt-2">
+            <div class="col-md-6">
+              <label class="form-label">Modalidad</label>
+              <select id="rentalMode" class="form-select">
+                <option value="dia">Por día(s)</option>
+                <option value="hora">Por hora(s)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Duración</label>
+              <input type="number" id="rentalDurationInput" class="form-control" min="1" max="30" value="3">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Fecha de inicio</label>
+              <input type="date" id="rentalStartDate" class="form-control">
+            </div>
+          </div>
+
+          <div class="rental-terms mt-4">
+            <h6><i class="fa-solid fa-shield-halved me-2"></i>Condiciones del servicio</h6>
+            <p>Depósito de garantía reembolsable: <strong>US$500.00</strong>.</p>
+            <p>Póliza Platinum demostrativa. La unidad se entrega con tanque lleno y debe devolverse en las mismas condiciones.</p>
+            <p>Se generará un contrato de alquiler con términos y espacios de firma.</p>
+          </div>
+
+          <div class="rental-calculation mt-3">
+            <div><span>Tarifa aplicada</span><strong id="rentalUnitPrice">$0.00</strong></div>
+            <div><span>Duración</span><strong id="rentalDurationLabel">3 días</strong></div>
+            <div><span>Subtotal estimado</span><strong id="rentalSubtotal">$0.00</strong></div>
+            <div><span>Fianza reembolsable</span><strong>$500.00</strong></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
+          <button class="btn btn-orange" id="addRentalButton">Agregar alquiler al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal del carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+      <div class="modal-content luxury-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-cart-shopping me-2"></i>Tu carrito</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItems"></div>
+          <div class="cart-summary mt-4" id="cartSummary"></div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button class="btn btn-outline-danger" id="clearCartButton">Vaciar carrito</button>
+          <button class="btn btn-gold" id="checkoutButton">Continuar al pago <i class="fa-solid fa-arrow-right ms-2"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de checkout -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content luxury-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-lock me-2"></i>Checkout seguro - DEMO</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="demo-warning">
+            <i class="fa-solid fa-circle-info"></i>
+            Entorno académico: los datos y pagos son ficticios. No se procesa dinero real.
+          </div>
+
+          <button class="btn btn-outline-gold w-100 my-3" id="fillDemoButton">
+            ⚡ Rellenar Datos Ficticios de Prueba (Demo VIP)
+          </button>
+
+          <form id="checkoutForm">
+            <h6 class="form-section-title">Datos del cliente</h6>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre y apellidos</label>
+                <input class="form-control" id="clientName" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Cédula</label>
+                <input class="form-control" id="clientId" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Licencia de conducir</label>
+                <input class="form-control" id="clientLicense">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Teléfono</label>
+                <input class="form-control" id="clientPhone" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="clientEmail" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Dirección de entrega</label>
+                <input class="form-control" id="clientAddress" required>
+              </div>
+            </div>
+
+            <h6 class="form-section-title mt-4">Método de pago simulado</h6>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Número de tarjeta demo</label>
+                <input class="form-control" id="cardNumber" required>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Vencimiento</label>
+                <input class="form-control" id="cardExpiry" required>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">CVV demo</label>
+                <input class="form-control" id="cardCvv" required>
+              </div>
+            </div>
+
+            <div class="checkout-total mt-4" id="checkoutTotal"></div>
+            <div class="form-check mt-3">
+              <input class="form-check-input" type="checkbox" id="acceptTerms" required>
+              <label class="form-check-label" for="acceptTerms">Acepto las condiciones demostrativas de esta simulación.</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
+          <button class="btn btn-gold" id="processPaymentButton">
+            <i class="fa-solid fa-file-pdf me-2"></i>Confirmar demo y generar PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zona temporal para documentos -->
+  <div id="pdfRenderArea" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="pdf_thumbnails.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
